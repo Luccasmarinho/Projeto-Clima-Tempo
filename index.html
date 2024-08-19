@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Clima Tempo</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="shortcut icon" href="assets/images/Bokehlicia-Captiva-Cloud.256.png" type="image/x-icon">
+    <script src="assets/js/consultaApi.js" defer type="module"></script>
+    <script src="assets/js/main.js" defer type="module"></script>
+</head>
+<body>
+    <main>
+        <section class="container">
+            <form class="container__pesquisa">
+                <input type="search" name="search" class="container__pesquisa__input-procura" placeholder="Buscar cidade" required>
+                <button class="container__pesquisa__btn-procura">
+                    <i class="fa-solid fa-magnifying-glass" id="icon-pesquisa"></i>
+                </button>
+            </form>
+
+            <section class="box-error" id="box-error">
+                <p>Não foi possível localizar.</p>
+                <img src="assets/images/undraw_page_not_found_re_e9o6.svg" alt="">
+            </section>
+
+            <section class="box-hidden">
+                
+                <div class="box-hidden__title">
+                    <h2 class="box-hidden__title__titulo" id="cidade">Recife, BR</h2>
+                </div>
+                <div class="box-hidden__box-graus">
+                    <div class="box-graus__icone">
+                        <img src="assets/images/Dapino-Summer-Holiday-Sun.256.png" alt="Ícone de clima" id="img-clima">
+                    </div>
+                    <div class="box-graus__tempo">
+                        <span class="box-graus__tempo__temperatura" id="temperatura-atual">26,1°C</span>
+                        <span class="box-graus__tempo__condicao" id="condicao-climatica">Nublado</span>
+                    </div>
+                </div>
+
+                <div class="box-hidden__detalhes-tempo">
+                    <div class="detalhes-tempo__box-left">
+                        <div class="detalhes-tempo__squares">
+                            <div class="detalhes-tempo__squares__icone">
+                                <i class="fa-solid fa-temperature-high" id="icon-max"></i>
+                            </div>
+                            <div class="detalhes-tempo__squares__info">
+                                <p>Temp. máx</p>
+                                <span id="temperatura-maxima">25°C</span>
+                            </div>
+                        </div>
+                        <div class="detalhes-tempo__squares">
+                            <div class="detalhes-tempo__squares__icone">
+                                <i class="fa-solid fa-droplet" id="icon-humidade"></i>
+                            </div>
+                            <div class="detalhes-tempo__squares__info">
+                                <p>Humidade</p>
+                                <span id="humidade">25%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detalhes-tempo__box-right">
+                        <div class="detalhes-tempo__squares">
+                             <div class="detalhes-tempo__squares__icone">
+                                <i class="fa-solid fa-temperature-low" id="icon-min"></i>
+                            </div>
+                            <div class="detalhes-tempo__squares__info">
+                                <p>Temp. min</p>
+                                <span id="temperatura-minima">°C</span>
+                            </div>
+                        </div>
+                        <div class="detalhes-tempo__squares">
+                            <div class="detalhes-tempo__squares__icone">
+                                <i class="fa-solid fa-wind" id="icon-vento"></i>
+                            </div>
+                            <div class="detalhes-tempo__squares__info">
+                                <p>Vento</p>
+                                <span id="vento">25 Km/h</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+</body>
+</html>
